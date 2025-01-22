@@ -3,7 +3,7 @@ author: "Suki Xuu"
 title: "个人网站搭建1 --Hugo"
 date: "2025-01-21"
 description: "使用HUGO搭建个人网站"
-分类标签: ["Web Build", "Hugo"]
+cntags: ["Web Build", "Hugo"]
 ShowToc: true
 ShowBreadCrumbs: false
 ---

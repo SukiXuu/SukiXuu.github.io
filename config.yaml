@@ -28,7 +28,7 @@ outputs:
 
 languages:    #语言切换以及页面切换
   en:
-    languageName: "English"
+    languageName: "en"
     weight: 1
     taxonomies:
       category: categories
@@ -54,7 +54,7 @@ languages:    #语言切换以及页面切换
     # title: SuKi的博客
     taxonomies:
       category: FRcategories
-      tag: 分类标签
+      tag: cntags
       series: CNSeries
     menu:
       main:
