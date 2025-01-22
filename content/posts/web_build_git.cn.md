@@ -34,6 +34,7 @@ ShowBreadCrumbs: false
    ```bash
    git branch -M main
    git remote add origin https://github.com/SukiXuu/SukiXuu.github.io
+   # `git remote remove origin` 移除已有的远程仓库origin
    ```
 5. 把本地仓库推送到远程仓库：
    ```
