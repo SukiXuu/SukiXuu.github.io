@@ -101,8 +101,8 @@
   "keywords": [
     
   ],
-  "articleBody": "使用HUGO搭建个人网站。\n把本地托管到GitHub 本地terminal中cd到HUGO项目目录\n将本地repo初始化为一个新的repo\ngit init -b main 暂存所有文件，commit到本地仓库\ngit add. Adds the files in the local repository and stages them for commit. 若要取消暂存文件，请使用“git reset HEAD YOUR-FILE”。 git commit -m \"First Commit\" 关联远程仓库：\ngit remote add origin https://github.com/SukiXuu/SukiXuu.github.io 把本地仓库推送到远程仓库：\ngit push -u origin main 等待几分钟，网站应该就已经部署成功了。\n",
-  "wordCount" : "45",
+  "articleBody": "使用HUGO搭建个人网站。\n把本地托管到GitHub 本地terminal中cd到HUGO项目目录\n将本地repo初始化为一个新的repo\necho \"# SukiXuu.github.io\" \u003e\u003e README.md git init 暂存所有文件，commit到本地仓库\ngit add. #Adds the files in the local repository and stages them for commit. 若要取消暂存文件，请使用 # `git reset --hard HEAD^` 撤销最后一次提交, 不保留任何提交 # `git reset --soft HEAD^` 撤销最后一次提交，保留提交记录到暂存区 git commit -m \"First Commit\" 关联远程仓库：\ngit branch -M main git remote add origin https://github.com/SukiXuu/SukiXuu.github.io 把本地仓库推送到远程仓库：\ngit push -u origin main 等待几分钟，网站应该就已经部署成功了。\n",
+  "wordCount" : "62",
   "inLanguage": "cn",
   "image": "http://localhost:1313/SukiXuu/SukiXuu.github.io/images/papermod-cover.png","datePublished": "2025-01-21T00:00:00Z",
   "dateModified": "2025-01-21T00:00:00Z",
@@ -217,18 +217,22 @@
 </li>
 <li>
 <p>将本地repo初始化为一个新的repo</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git init -b main
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;# SukiXuu.github.io&#34;</span> &gt;&gt; README.md
+</span></span><span class="line"><span class="cl">git init
 </span></span></code></pre></div></li>
 <li>
 <p>暂存所有文件，commit到本地仓库</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git add.
-</span></span></code></pre></div><h1 id="adds-the-files-in-the-local-repository-and-stages-them-for-commit-若要取消暂存文件请使用git-reset-head-your-file">Adds the files in the local repository and stages them for commit. 若要取消暂存文件，请使用“git reset HEAD YOUR-FILE”。<a hidden class="anchor" aria-hidden="true" href="#adds-the-files-in-the-local-repository-and-stages-them-for-commit-若要取消暂存文件请使用git-reset-head-your-file">#</a></h1>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git commit -m <span class="s2">&#34;First Commit&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#Adds the files in the local repository and stages them for commit. 若要取消暂存文件，请使用</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># `git reset --hard HEAD^` 撤销最后一次提交, 不保留任何提交</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># `git reset --soft HEAD^` 撤销最后一次提交，保留提交记录到暂存区</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git commit -m <span class="s2">&#34;First Commit&#34;</span>
 </span></span></code></pre></div></li>
 <li>
 <p>关联远程仓库：</p>
-<pre tabindex="0"><code>git remote add origin https://github.com/SukiXuu/SukiXuu.github.io
-</code></pre></li>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git branch -M main
+</span></span><span class="line"><span class="cl">git remote add origin https://github.com/SukiXuu/SukiXuu.github.io
+</span></span></code></pre></div></li>
 <li>
 <p>把本地仓库推送到远程仓库：</p>
 <pre tabindex="0"><code>git push -u origin main
