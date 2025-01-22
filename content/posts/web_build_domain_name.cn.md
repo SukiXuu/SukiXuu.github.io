@@ -1,7 +1,7 @@
 ---
 author: "Suki Xuu"
 title: "个人网站搭建3 --Custom Domain"
-date: "2025-01-23"
+date: "2025-01-22"
 description: "让在github pages上搭建的个人网站，使用个人域名"
 cntags: ["Web Build", " Domain Name"]
 ShowToc: false

@@ -1,4 +1,4 @@
-baseURL: https://github.com/SukiXuu/SukiXuu.github.io
+baseURL: https://sukixuu.click
 title: SuKi Blog
 pagination.PagerSize: 5    #分页数
 theme: ["PaperMod"]
@@ -34,7 +34,7 @@ languages:    #语言切换以及页面切换
       category: categories
       tag: tags
       series: series
-    menu:    
+    menu:   
       main:
         - name: Archive
           url: archives
