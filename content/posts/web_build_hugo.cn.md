@@ -85,8 +85,8 @@ extended/deploy editions：可以将您的网站直接部署到 Google Cloud Sto
 		```
 
 3. 将网站配置中的主题设置为PaperMod
-   在 `config.yml` | `hugo.yaml` 中添加：
-	```sh
+   在 `hugo.yaml` 中添加以下，并重新命名成为 `config.yaml`：
+	```yaml
 	theme: ["PaperMod"]
 	```
 

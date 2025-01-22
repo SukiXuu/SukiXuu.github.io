@@ -78,10 +78,10 @@ ShowBreadCrumbs: false
 ---
 
 6. 更改GitHub Actions的配置文件，使其能够自动部署网站。
+    - 启用 GitHub Actions 并配置 Pages: 进入你的仓库页面，点击 Settings; 找到左侧的 Pages 选项，选择 GitHub Actions 作为 Source。
     - settings -> actions -> new workflow -> set up a workflow yourself -> 选择HUGO模板 -> 编辑yaml文件 -> 找到push到main分支的步骤 -> 找到deploy步骤 -> 编辑deploy步骤，对比[PaperMod Demo 的 部署文件](https://github.com/adityatelange/hugo-PaperMod/actions/runs/9920318194/workflow)，自行做相应修改。
     - 保存并运行workflow。
     - 等待几分钟，网站应该已经部署成功。在之后的github提交会自动部署到网站。
-
 
 ---
 
