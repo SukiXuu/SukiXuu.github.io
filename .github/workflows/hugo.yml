@@ -69,23 +69,23 @@ jobs:
         run: git submodule update --init --recursive
       - name: Update theme to Latest commit
         run: git submodule update --remote --merge
-      # - name: Build with Hugo
-      #   env:
-      #     HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
-      #     HUGO_ENVIRONMENT: production
-      #   run: |
-      #     hugo \
-      #       --minify \
-      #       --baseURL "${{ steps.pages.outputs.base_url }}/"
+      - name: Build with Hugo
+        env:
+          HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
+          HUGO_ENVIRONMENT: production
+        run: |
+          hugo \
+            --minify \
+            --baseURL "${{ steps.pages.outputs.base_url }}/"
       
-      # 3. 构建 Hugo 网站
-      - name: Build Hugo site
-        run: hugo -D
+      # # 3. 构建 Hugo 网站
+      # - name: Build Hugo site
+      #   run: hugo -D
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./public
+      # - name: Upload artifact
+      #   uses: actions/upload-pages-artifact@v3
+      #   with:
+      #     path: ./public
 
 
   # Deployment job
