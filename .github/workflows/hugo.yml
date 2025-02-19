@@ -74,13 +74,13 @@ jobs:
     needs: build
     steps:
       # 跨作业共享目录
-      - name: Download public directory artifact
-        uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v4      
         with:
           name: public
-
-      - name: List files in public directory
-        run: ls -alh ./public  # Confirm the contents of the public directory
+          path: ./public
+      - name: Display structure of downloaded files
+        run: ls -R ./public 
+      
       - name: Deploy to S3
         id: deployment
         run: |
