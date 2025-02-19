@@ -61,7 +61,7 @@ jobs:
           hugo --minify --baseURL "https://sukixuu.click"
       # 跨作业共享目录
       - name: Upload public directory as artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: public
           path: ./public
@@ -75,7 +75,7 @@ jobs:
     steps:
       # 跨作业共享目录
       - name: Download public directory artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: public
 
