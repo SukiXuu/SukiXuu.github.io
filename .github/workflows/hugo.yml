@@ -104,7 +104,7 @@ jobs:
       # 上传构建后的文件到 S3
       - name: Deploy to S3
         run: |
-          aws s3 sync ./public/ s3://sukixuu.click/ --delete
+          aws s3 sync ./ s3://sukixuu.click/ --delete
       # 清除CloudFront缓存
       - name: Invalidate CloudFront Cache  
         run: |
