@@ -1,3 +1,4 @@
+
 name: Deploy Hugo site to S3
 
 on:
@@ -58,7 +59,7 @@ jobs:
           HUGO_ENVIRONMENT: production
         run: |
           hugo --minify --baseURL "https://sukixuu.click"
-  
+          ls -alh ./public  # 查看 public 目录是否生成
   deploy:
     environment:
       name: production
