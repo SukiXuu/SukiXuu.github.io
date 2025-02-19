@@ -91,6 +91,11 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      # # 上传构建后文件到 GitHub Pages
+      # - name: Deploy to GitHub Pages
+      #   id: deployment
+      #   uses: actions/deploy-pages@v4
+      
       # 上传构建后的文件到 S3
       - name: Deploy to S3
         run: |
@@ -99,5 +104,5 @@ jobs:
       - name: Invalidate CloudFront Cache  
         run: |
           aws cloudfront create-invalidation \
-            --distribution-id E3UR4T8ECA3QP7 \
+            --distribution-id E335WW2AH41A79 \
             --paths "/*"
