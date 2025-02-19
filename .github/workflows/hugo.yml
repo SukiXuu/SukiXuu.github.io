@@ -59,7 +59,13 @@ jobs:
           HUGO_ENVIRONMENT: production
         run: |
           hugo --minify --baseURL "https://sukixuu.click"
-          ls -alh ./public  # 查看 public 目录是否生成
+      # 跨作业共享目录
+      - name: Upload public directory as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: public
+          path: ./public
+      
   deploy:
     environment:
       name: production
@@ -67,6 +73,12 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      # 跨作业共享目录
+      - name: Download public directory artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: public
+
       - name: List files in public directory
         run: ls -alh ./public  # Confirm the contents of the public directory
       - name: Deploy to S3
