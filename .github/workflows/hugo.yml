@@ -69,14 +69,19 @@ jobs:
         run: git submodule update --init --recursive
       - name: Update theme to Latest commit
         run: git submodule update --remote --merge
-      - name: Build with Hugo
-        env:
-          HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
-          HUGO_ENVIRONMENT: production
-        run: |
-          hugo \
-            --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
+      # - name: Build with Hugo
+      #   env:
+      #     HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
+      #     HUGO_ENVIRONMENT: production
+      #   run: |
+      #     hugo \
+      #       --minify \
+      #       --baseURL "${{ steps.pages.outputs.base_url }}/"
+      
+      # 3. 构建 Hugo 网站
+      - name: Build Hugo site
+        run: hugo -D
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -96,13 +101,13 @@ jobs:
       #   id: deployment
       #   uses: actions/deploy-pages@v4
       - name: List files in the public directory
-        run: ls -alh ./public  # 检查是否存在 public 目录
+        run: ls -alh ./  # 检查是否存在 public 目录
 
       # 上传构建后的文件到 S3
       - name: Deploy to S3
         id: deployment
         run: |
-          aws s3 sync ./ s3://sukixuu.click/ --delete
+          aws s3 sync ./public s3://sukixuu.click/ --delete
       # 清除CloudFront缓存
       - name: Invalidate CloudFront Cache  
         run: |
