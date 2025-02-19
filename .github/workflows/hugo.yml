@@ -86,8 +86,8 @@ jobs:
   # Deployment job
   deploy:
     environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      name: production
+      url: https://sukixuu.click
     runs-on: ubuntu-latest
     needs: build
     steps:
@@ -100,6 +100,7 @@ jobs:
 
       # 上传构建后的文件到 S3
       - name: Deploy to S3
+        id: deployment
         run: |
           aws s3 sync ./ s3://sukixuu.click/ --delete
       # 清除CloudFront缓存
