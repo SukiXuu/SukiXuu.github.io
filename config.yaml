@@ -45,8 +45,8 @@ languages:    #语言切换以及页面切换
         - name: Tags
           url: tags/
           weight: 10
-        - name: WiKi
-          url: https://github.com/adityatelange/hugo-PaperMod/wiki/
+        # - name: WiKi
+        #   url: https://github.com/adityatelange/hugo-PaperMod/wiki/
 
   cn:
     languageName: ":cn:"
@@ -73,22 +73,27 @@ languages:    #语言切换以及页面切换
         # - name: NullLink
         #   url: "#"
 
-    # #根据语言做了两个不一样的主页
-    # params:
-    #   languageAltTitle: Chinese
-    #   profileMode:
-    #     enabled: true
-    #     title: PaperMod
-    #     imageUrl: "https://raw.githubusercontent.com/googlefonts/noto-emoji/master/svg/emoji_u1f9d1_1f3fb_200d_1f4bb.svg"
-    #     imageTitle: ProfileMode image
-    #     # imageWidth: 120
-    #     # imageHeight: 120
-    #     subtitle: "☄️ Fast | ☁️ Fluent | 🌙 Smooth | 📱 Responsive"
-    #     buttons:
-    #       - name: Blog
-    #         url: posts
-    #       - name: Profile Mode
-    #         url: https://github.com/adityatelange/hugo-PaperMod/wiki/Features#profile-mode
+    # 中文的主页
+    params:
+      languageAltTitle: Chinese
+      profileMode:
+        enabled: true
+        title: Suki Xuu
+        imageUrl: "https://raw.githubusercontent.com/googlefonts/noto-emoji/master/svg/emoji_u1f9d1_1f3fb_200d_1f4bb.svg"
+        imageTitle: ProfileMode image
+        # imageWidth: 120
+        # imageHeight: 120
+        subtitle: |
+          一个永远在数据与技术冒险中的小“菜鸡”😝...
+
+          这里分享我的项目、好玩的技术实验和一路上的学习点滴。
+
+          欢迎一起在数据与技术的世界里，开启这场充满惊喜的探索之旅！
+        buttons:
+          - name: Blog
+            url: posts
+          - name: Profile Mode
+            url: https://github.com/adityatelange/hugo-PaperMod/wiki/Features#profile-mode
 
   fa:
     languagedirection: rtl    #把语言切换和title放右边
@@ -137,31 +142,45 @@ params:
 
   # Home-Info Mode
   homeInfoParams:
-    Title: Hi there wave
-    Content: >
-      👋 Welcome to demo page of Hugo's theme PaperMod!
+    Title: "数据与技术的无限旅程 \U0001F30C"
+    Content: |
+      嗨～我是Suki Xuu，一个永远在数据与技术冒险中的小“菜鸡”😝...在这里，我分享我的项目、好玩的技术实验和一路上的学习点滴。来吧，和我一起在数据与技术的世界里，开启这场充满惊喜的探索之旅！
 
-      - **PaperMod**  is designed to be clean and simple but fast and responsive theme with useful feature-set that enhances UX.
+      #### 🌟 项目展示
 
-      - Feel free to show your support by giving us a star 🌟 on GitHub and sharing with your friends and social media .
+      - 气象数据分析
 
-      - PaperMod is based on theme [Paper](https://github.com/nanxiaobei/hugo-paper/tree/4330c8b12aa48bfdecbcad6ad66145f679a430b3).
+      开发了一套自动化AI/ML解决方案，优化澳大利亚气象局（BoM）数据处理流程，将处理时间从两小时缩短至20分钟，同时显著提升了分析精度。
 
+      - 文本分类与生成模型
+
+      构建了一个GRU集成模型，准确区分机器生成与人工撰写文本，表现优异。
+
+      #### 🛠 技术栈
+
+        _编程语言: Python, R, SQL
+      
+        _云服务与工具: AWS, Docker, CI/CD
+      
+        _数据分析工具: Pandas, NumPy, Matplotlib
+      
+        _机器学习框架: TensorFlow, PyTorch, Scikit-learn
+      
   socialIcons: # optional
-    - name: "<platform>"
-      url: "<link>"
+    # - name: "<platform>"
+    #   url: "<link>"
     - name: github
       title: View Source on Github
-      url: "https://github.com/adityatelange/hugo-PaperMod"
-    - name: Discord
-      title: Join discord community
-      url: "https://discord.gg/ahpmTvhVmp"
-    - name: X
-      title: Share PaperMod on X/Twitter
-      url: "https://x.com/intent/tweet/?text=Checkout%20Hugo%20PaperMod%20%E2%9C%A8%0AA%20fast,%20clean,%20responsive%20Hugo%20theme.&url=https://github.com/adityatelange/hugo-PaperMod&hashtags=Hugo,PaperMod"
-    - name: KoFi
-      title: Buy me a Ko-Fi :)
-      url: "https://ko-fi.com/adityatelange"
+      url: "https://github.com/SukiXuu"
+    # - name: Discord
+    #   title: Join discord community
+    #   url: "https://discord.gg/ahpmTvhVmp"
+    # - name: X
+    #   title: Share PaperMod on X/Twitter
+    #   url: "https://x.com/intent/tweet/?text=Checkout%20Hugo%20PaperMod%20%E2%9C%A8%0AA%20fast,%20clean,%20responsive%20Hugo%20theme.&url=https://github.com/adityatelange/hugo-PaperMod&hashtags=Hugo,PaperMod"
+    # - name: KoFi
+    #   title: Buy me a Ko-Fi :)
+    #   url: "https://ko-fi.com/adityatelange"
 
   editPost:
     URL: "https://github.com/SukiXuu/SukiXuu.github.io/tree/main/content/"
