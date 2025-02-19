@@ -95,7 +95,12 @@ jobs:
       # - name: Deploy to GitHub Pages
       #   id: deployment
       #   uses: actions/deploy-pages@v4
+      - name: List files in the public directory
+        run: ls -alh ./public  # 检查是否存在 public 目录
+      - name: List files in the public directory
+        run: ls -alh ./bulid  # 检查是否存在 public 目录
       
+
       # 上传构建后的文件到 S3
       - name: Deploy to S3
         run: |
