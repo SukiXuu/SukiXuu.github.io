@@ -52,7 +52,7 @@ jobs:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
           HUGO_ENVIRONMENT: production
         run: |
-          hugo --minify --baseURL "https://sukixuu.click"
+          hugo --baseURL "https://sukixuu.click"
       # 跨作业共享目录
       - name: Upload public directory as artifact
         uses: actions/upload-artifact@v4
@@ -84,7 +84,7 @@ jobs:
       - name: Deploy to S3
         id: deployment
         run: |
-          aws s3 sync ./public s3://sukixuu.click/ --delete
+          aws s3 sync ./public s3://sukixuu.click/
       - name: Invalidate CloudFront Cache  
         run: |
           aws cloudfront create-invalidation \
